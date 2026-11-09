@@ -1,0 +1,6 @@
+# Inserts the learning-space bundle row. The Host half registers the
+# /learning-space/api HTTP endpoint and the Client half registers the sidebar
+# panel entry plus the main-panel page.
+- insert:
+    - id: learning-space
+      name: 'dsh-learning-space'

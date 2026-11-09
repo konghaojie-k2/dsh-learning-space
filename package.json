@@ -1,0 +1,51 @@
+{
+  "name": "dsh-learning-space",
+  "version": "0.13.3",
+  "private": false,
+  "type": "module",
+  "description": "Learning space plugin for DeepSeek Harness Web UI: multi-step AI courses, progressive unlocking, stage assessments, wrong-answer retraining, study plan, annotations, concept graph and spaced review.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "CONTRACT.md",
+    "locale/*.json",
+    "icon.svg",
+    "vendor/**"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "learning",
+    "education",
+    "courses",
+    "ai-tutor",
+    "spaced-repetition",
+    "concept-graph"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
